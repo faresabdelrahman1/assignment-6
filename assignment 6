@@ -1,0 +1,30 @@
+Problem U
+
+
+import java.util.Scanner;
+public class Main{
+
+    public static void main(String[] args) {
+
+        Scanner input =new Scanner(System.in);
+        System.out.println("enter the number");
+        String check=input.nextLine();
+        if(check.contains(".")){
+            String []parts=check.split("\\.");
+            int intPart = Integer.parseInt(parts[0]);
+            int decimalPart = Integer.parseInt(parts[1]);
+
+
+            if(decimalPart==0){
+                System.out.println("int   "+intPart);
+            }
+            else{
+                System.out.println("float   "+intPart+"  .  "+decimalPart);
+            }
+        }
+        else{
+            System.out.println("int "+Integer.parseInt(check));
+        }
+    }
+}
+
